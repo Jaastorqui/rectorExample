@@ -1,0 +1,24 @@
+{
+  "name": "jaastorqui/rector-example",
+  "description": "Only a rector example.",
+  "keywords": ["rector"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "rector/rector": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyClass\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
