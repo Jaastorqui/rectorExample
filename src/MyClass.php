@@ -5,7 +5,7 @@ namespace MyClass;
 class MyClass
 {
 
-    public function badParameterOrder($required, $name = 'default'): string
+    public function badParameterOrder($name = 'default', $required): string
     {
         // Optional parameter before required parameter - will be fixed by OptionalParametersAfterRequiredRector
         return "Processing $required with $name";
