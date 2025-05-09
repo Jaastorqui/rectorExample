@@ -4,12 +4,7 @@ namespace MyClass;
 
 class MyClass
 {
-    public $propertyName;
-    public $propertyValue;
-    /**
-     * @var string|null
-     */
-    public $name;
+
     public function badParameterOrder($required, $name = 'default'): string
     {
         // Optional parameter before required parameter - will be fixed by OptionalParametersAfterRequiredRector
@@ -26,7 +21,7 @@ class MyClass
     {
         $value = 'world';
         // Problematic string interpolation - will be fixed by VariableInStringInterpolationFixerRector
-        return "Hello {$value}!";
+        return "Hello ${value}!";
     }
 
     public function dynamicPropertyUsage($name, $value): string
@@ -38,7 +33,7 @@ class MyClass
         return "Set {$this->propertyName} to {$this->propertyValue}";
     }
 
-    public function setName(?string $name = null): void
+    public function setName(string $name = null): void
     {
         // This method is just an example of a setter
         $this->name = $name;
